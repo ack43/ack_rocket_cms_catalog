@@ -1,8 +1,7 @@
-module AckRocketCMSCatalog
+module AckRocketCmsCatalog
   class << self
     def item_config(fields = {})
       Proc.new {
-        navigation_label "Каталог"
 
         # field :views_count do
         #   read_only true
@@ -77,7 +76,6 @@ module AckRocketCMSCatalog
 
     def item_category_config(fields = {})
       Proc.new {
-        navigation_label "Каталог"
 
         list do
           scopes [:sorted, :enabled, nil]
@@ -206,6 +204,6 @@ module AckRocketCMSCatalog
       }
     end
 
-    
+
   end
 end

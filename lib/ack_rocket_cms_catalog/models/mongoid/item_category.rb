@@ -1,4 +1,4 @@
-module AckRocketCMSCatalog
+module AckRocketCmsCatalog
   module Models
     module Mongoid
       module ItemCategory
@@ -8,7 +8,7 @@ module AckRocketCMSCatalog
 
           include RocketCMSMongoidPaperclip
           rocket_cms_mongoid_attached_file(:image,
-                    styles: AckRocketCMSCatalog.configuration.item_category_image_styles,
+                    styles: AckRocketCmsCatalog.configuration.item_category_image_styles,
                     content_type: { content_type: ["image/jpg", "image/jpeg", "image/png"] }
           )
 
@@ -18,7 +18,7 @@ module AckRocketCMSCatalog
           field :excerpt,   type: String, localize: RocketCMS.configuration.localize, default: ""
           field :content,   type: String, localize: RocketCMS.configuration.localize, default: ""
 
-          embeds_many :item_categoty_images, cascade_callbacks: true
+          embeds_many :item_categoty_images, cascade_callbacks: true, class_name: "AckRocketCmsCatalog::ItemCategoryImage"
           alias :images :item_categoty_images
           accepts_nested_attributes_for :item_categoty_images, allow_destroy: true
         end

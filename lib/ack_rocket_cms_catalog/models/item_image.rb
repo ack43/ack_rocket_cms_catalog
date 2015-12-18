@@ -1,4 +1,4 @@
-module AckRocketCMSCatalog
+module AckRocketCmsCatalog
   module Models
     module ItemImage
       extend ActiveSupport::Concern

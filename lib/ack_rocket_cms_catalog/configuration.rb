@@ -1,4 +1,4 @@
-module AckRocketCMSCatalog
+module AckRocketCmsCatalog
   def self.configuration
     @configuration ||= Configuration.new
   end

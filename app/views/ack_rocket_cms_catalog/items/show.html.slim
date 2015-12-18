@@ -1,6 +1,6 @@
-= render partial: "blocks/seo_block_with_obj", locals: {obj: @item}
+= render partial: "/blocks/seo_block_with_obj", locals: {obj: @item}
 
-.item_fulltitle=@item.full_name
+/ .item_fulltitle=@item.full_name
 .item_title= @item.name
 
 .item_photoblock
@@ -9,14 +9,14 @@
 
     
 .item_block
-  = link_to item_path(i), title: i.name do
+  = link_to ack_rocket_cms_catalog.item_path(@item), title: @item.name do
     .i_block
 
 
     .i_img_block
 
         .i_image_block
-          = image_tag i.image.url(:main), alt: i.name, title: i.name
+          = image_tag @item.image.url(:main), alt: @item.name, title: @item.name
 
         .i_block_mask
           .i_block_mask-1
@@ -24,9 +24,9 @@
 
     .i_text_block
       h4.i_title_block
-        = i.name
-      h5.i_fullname
-        =i.full_name
+        = @item.name
+      / h5.i_fullname
+      /   =@item.full_name
       hr
       .i_excerpt_block
-        == i.excerpt
+        == @item.excerpt

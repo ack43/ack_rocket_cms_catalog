@@ -5,7 +5,7 @@ require 'ack_rocket_cms_catalog/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "ack_rocket_cms_catalog"
-  spec.version       = AckRocketCMSCatalog::VERSION
+  spec.version       = AckRocketCmsCatalog::VERSION
   spec.authors       = ["Alexander Kiseliev"]
   spec.email         = ["i43ack@gmail.com"]
 
@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
 
   spec.add_dependency 'rails', '>= 4.1.0', '< 5.0'
-  
+
   spec.add_dependency 'money-rails'
   spec.add_dependency 'mongoid_money_field'
 

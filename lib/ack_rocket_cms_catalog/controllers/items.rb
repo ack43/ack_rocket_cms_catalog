@@ -1,6 +1,6 @@
-module AckRocketCMSCatalog
+module AckRocketCmsCatalog
   module Controllers
-    module ItemCategories
+    module Items
       extend ActiveSupport::Concern
 
       def index

@@ -1,4 +1,4 @@
-/ = render partial: "blocks/seo_block"
+= render partial: "blocks/seo_block"
 
 .ic_content
   //- @item_categories.each do |ic|
@@ -8,7 +8,7 @@
 
       .ic_block
 
-        = link_to item_category_path(ic), title: ic.name do
+        = link_to ack_rocket_cms_catalog.item_category_path(ic), title: ic.name do
 
           .ic_img_block
 

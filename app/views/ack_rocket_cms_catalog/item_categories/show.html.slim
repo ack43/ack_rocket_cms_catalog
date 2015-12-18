@@ -1,4 +1,4 @@
-//= render partial: "blocks/seo_block_with_obj", locals: {obj: @item_category}
+= render partial: "blocks/seo_block_with_obj", locals: {obj: @item_category}
 
 
 .ic_content
@@ -22,7 +22,7 @@
 
         .ic_block
 
-          = link_to item_category_path(icc), title: icc.name do
+          = link_to ack_rocket_cms_catalog.item_category_path(icc), title: icc.name do
 
             .ic_img_block
 
@@ -52,7 +52,7 @@
 
 
         .item_block
-          = link_to item_path(i), title: i.name do
+          = link_to ack_rocket_cms_catalog.item_path(i), title: i.name do
             .i_block
 
 
@@ -69,8 +69,8 @@
             .i_text_block
               h4.i_title_block
                 = i.name
-              h5.i_fullname
-                =i.full_name
+              / h5.i_fullname
+              /   =i.full_name
               hr
               .i_excerpt_block
                 == i.excerpt

@@ -8,21 +8,21 @@ require 'ack_rocket_cms_catalog/configuration'
 require 'ack_rocket_cms_catalog/engine'
 require 'ack_rocket_cms_catalog/admin'
 
-module AckRocketCMSCatalog
+module AckRocketCmsCatalog
   class << self
     def orm
       :mongoid
     end
     def mongoid?
       true
-      # AckRocketCMSCatalog.orm == :mongoid
+      # AckRocketCmsCatalog.orm == :mongoid
     end
     def active_record?
       false
-      # AckRocketCMSCatalog.orm == :active_record
+      # AckRocketCmsCatalog.orm == :active_record
     end
     def model_namespace
-      "AckRocketCMSCatalog::Models::#{AckRocketCMSCatalog.orm.to_s.camelize}"
+      "AckRocketCmsCatalog::Models::#{AckRocketCmsCatalog.orm.to_s.camelize}"
     end
     def orm_specific(name)
       "#{model_namespace}::#{name}".constantize

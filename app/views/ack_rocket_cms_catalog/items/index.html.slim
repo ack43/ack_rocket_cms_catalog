@@ -1,11 +1,11 @@
-/ = render partial: "blocks/seo_block_with_obj", locals: {obj: @item}
+= render partial: "blocks/seo_block_with_obj", locals: {obj: @item}
 
 
 .i_content
   - unless @items.blank?
     - @items.each do |i|
       .item_block
-        = link_to item_path(i), title: i.name do
+        = link_to ack_rocket_cms_catalog.item_path(i), title: i.name do
           .i_block
 
 
@@ -21,8 +21,8 @@
           .i_text_block
             h4.i_title_block
               = i.name
-            h5.i_fullname
-              =i.full_name
+            / h5.i_fullname
+            /   =i.full_name
             hr
             .i_excerpt_block
               == i.excerpt

@@ -1,9 +1,9 @@
-module AckRocketCMSCatalog
+module AckRocketCmsCatalog
   module Models
     module Item
       extend ActiveSupport::Concern
       include RocketCMS::Model
-      include AckRocketCMSCatalog.orm_specific('Item')
+      include AckRocketCmsCatalog.orm_specific('Item')
 
       include Enableable
       include Seoable

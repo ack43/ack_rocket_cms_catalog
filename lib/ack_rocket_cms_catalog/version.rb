@@ -1,3 +1,3 @@
-module AckRocketCMSCatalog
-  VERSION = "0.1.0"
+module AckRocketCmsCatalog
+  VERSION = "0.2.0"
 end

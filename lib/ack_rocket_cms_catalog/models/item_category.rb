@@ -1,9 +1,9 @@
-module AckRocketCMSCatalog
+module AckRocketCmsCatalog
   module Models
     module ItemCategory
       extend ActiveSupport::Concern
       include RocketCMS::Model
-      include AckRocketCMSCatalog.orm_specific('ItemCategory')
+      include AckRocketCmsCatalog.orm_specific('ItemCategory')
 
       include Enableable
       include Seoable
@@ -23,11 +23,11 @@ module AckRocketCMSCatalog
         end
 
         def items
-          ::Item.in(item_category_ids: self.id)
+          AckRocketCmsCatalog::Item.in(item_category_ids: self.id)
         end
 
         def all_items
-          ::Item.any_in(item_category_ids: self.self_and_descendants.map(&:id))
+          AckRocketCmsCatalog::Item.any_in(item_category_ids: self.self_and_descendants.map(&:id))
         end
       end
     end
